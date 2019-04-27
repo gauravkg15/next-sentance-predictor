@@ -1,0 +1,7 @@
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\bin\Debug\SentenceRecommender.exe.config
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\bin\Debug\SentenceRecommender.exe
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\bin\Debug\SentenceRecommender.pdb
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\obj\Debug\SentenceRecommender.csprojAssemblyReference.cache
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\obj\Debug\SentenceRecommender.csproj.CoreCompileInputs.cache
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\obj\Debug\SentenceRecommender.exe
+C:\Users\garre\source\repos\SentenceRecommender\SentenceRecommender\obj\Debug\SentenceRecommender.pdb

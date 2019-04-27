@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceRecommender", "SentenceRecommender\SentenceRecommender.csproj", "{C749D9A8-BB38-4E4C-BFC3-7890AFE68694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C749D9A8-BB38-4E4C-BFC3-7890AFE68694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C749D9A8-BB38-4E4C-BFC3-7890AFE68694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C749D9A8-BB38-4E4C-BFC3-7890AFE68694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C749D9A8-BB38-4E4C-BFC3-7890AFE68694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {151592BA-6C5D-4245-9B2C-A4B86EB2DC65}
+	EndGlobalSection
+EndGlobal
