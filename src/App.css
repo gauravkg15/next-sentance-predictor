@@ -8,6 +8,14 @@
   pointer-events: none;
 }
 
+
+.fa-headphones-alt {
+  padding: 25px;
+  font-size: 100px;
+  border-radius: 100%;
+  background: rgb(0, 148, 211);
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
