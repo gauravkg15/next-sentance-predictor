@@ -8,12 +8,23 @@
   pointer-events: none;
 }
 
-.fa-headphones-alt {
+.icon {
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 25px;
   font-size: 100px;
   border-radius: 100%;
   background: rgb(0, 148, 211);
   cursor: pointer;
+}
+
+.voice-input-active {
+  animation: shadow-pulse 0.85s infinite;
 }
 
 .App-header {
@@ -38,4 +49,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgb(0, 148, 211, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 45px rgb(0, 148, 211, 0.2);
+     }
 }
