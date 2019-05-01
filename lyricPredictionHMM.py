@@ -103,7 +103,9 @@ def predict(word0):
 #get user input and call predict method
 while True:
     # Get user input for initial word
-    word0 = input("Enter a word or stop! to stop: ")
+    word0 = input("Enter a word/phrase or stop! to stop: ")
+    #just get final word from user input
+    word0 = word0.split()[-1]
     if(word0 == "stop!"):
         break
     predict(word0)
