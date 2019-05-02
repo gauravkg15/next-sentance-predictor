@@ -1,1 +1,1 @@
-live at gauravkg15.github.io/next-sentance-predictor
+live @ gauravkg15.github.io/next-sentance-predictor
