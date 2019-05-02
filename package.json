@@ -2,6 +2,7 @@
   "name": "next-sentance-predictor",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://gauravkg15.github.io/next-sentance-predictor"
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
