@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fc4dbf41f00cf9559937e69d568285a1",
+    "revision": "143a06285cdad5aad64c301b298204e8",
     "url": "/next-sentance-predictor/index.html"
   },
   {
-    "revision": "b1adfadfc982793a89c4",
+    "revision": "15e3d772aa5e19631466",
     "url": "/next-sentance-predictor/static/css/main.ffefa2d1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/next-sentance-predictor/static/js/2.3d8dcad6.chunk.js"
   },
   {
-    "revision": "b1adfadfc982793a89c4",
-    "url": "/next-sentance-predictor/static/js/main.f07f43da.chunk.js"
+    "revision": "15e3d772aa5e19631466",
+    "url": "/next-sentance-predictor/static/js/main.b6857bb6.chunk.js"
   },
   {
     "revision": "3e4388323180bb0bae0e",
