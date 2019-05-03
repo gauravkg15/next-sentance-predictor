@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Recommender from './RecommendInJavaScript';
+
 
 
 class App extends React.Component {
@@ -7,8 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
        isSpeaking: false,
-       isFetching: false,
-       recognizedText: '',
+       recommendation: '',
        SpeechRecognizer: this.getSpeechRecognizer(),
     };
   }
@@ -24,10 +25,9 @@ class App extends React.Component {
     SpeechRecognizer.onresult = (event) => {
       for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-          this.setState({
-            isSpeaking: false,
-            recognizedText: event.results[i][0].transcript,
-          })
+          const result = event.results[i][0].transcript;
+          console.log(result);
+          this.setState({ isSpeaking: false, recommendation: Recommender(result) });
         }
         SpeechRecognizer.stop();
       }
@@ -40,8 +40,6 @@ class App extends React.Component {
   getTextFromSpeech = () => {
     const {
       isSpeaking,
-      isFetching,
-      recognizedText,
       SpeechRecognizer,
      } = this.state;
 
@@ -57,24 +55,26 @@ class App extends React.Component {
   render() {
     const {
       isSpeaking,
-      isFetching,
-      recognizedText,
-      SpeechRecognizer,
+      recommendation,
      } = this.state;
 
     return (
       <div className="App">
         <div className="App-header">
           <h1> Predict the next lyrics! </h1>
-            <div className={`icon ${isSpeaking ? 'voice-input-active' : ''}` } onClick={this.getTextFromSpeech}>
-              <i className="fas fa-microphone-alt" />
-            </div>
+          <div className={`icon ${isSpeaking ? 'voice-input-active' : ''}` } onClick={this.getTextFromSpeech}>
+            <i className="fas fa-microphone-alt" />
+          </div>
           {
-            recognizedText &&
+            recommendation &&
             <React.Fragment>
-              <h3> Recognized text </h3>
-              <p> { recognizedText } </p>
+              <h3> The next word is: </h3>
+              <p> { recommendation } </p>
             </React.Fragment>
+          }
+          {
+            recommendation === null &&
+            <h3> Sorry, no recommendations at this time. </h3>
           }
         </div>
       </div>

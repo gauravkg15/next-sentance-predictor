@@ -1,6 +1,6 @@
 class TrieNode
 {
-  
+
   constructor(value)
   {
     this.children = new Set();
@@ -21,12 +21,12 @@ class TrieNode
     }
     return null;
   }
-  
+
 }
 
 function findMaxChild(cur)
 {
-  if(cur.children.length == 0)
+  if(cur.children.length === 0)
   {
     return null;
   }
@@ -35,12 +35,12 @@ function findMaxChild(cur)
     var curMaxChild = null;
     for (let curChild of cur.children)
     {
-      if(curMaxChild == null || curMaxChild.amtFinishes < curChild.amtFinishes)
+      if(curMaxChild === null || curMaxChild.amtFinishes < curChild.amtFinishes)
       {
         curMaxChild = curChild;
       }
     }
-    
+
     return curMaxChild;
   }
 }
@@ -50,14 +50,14 @@ function Recommend(sentence, head)
   var cur = head;
   var words = sentence.split(" ");
   var recommendation = "";
-  
+
   if(sentence.length > 0)
   {
     var i;
     for(i = 0; i < words.length; i++)
     {
       var next = cur.findChildNode(words[i]);
-      if(next == null)
+      if(next === null)
       {
         console.log("did not find the word");
         return null;
@@ -70,8 +70,8 @@ function Recommend(sentence, head)
     }
   }
   var maxChild = findMaxChild(cur);
-  
-  if(maxChild != null)
+
+  if(maxChild !== null)
   {
     console.log("found greatest " + maxChild.value);
   }
@@ -79,10 +79,10 @@ function Recommend(sentence, head)
   {
     console.log("no child nodes found");
   }
-  
+
   recommendation += maxChild.value;
   console.log(recommendation);
-  return recommendation;
+  return recommendation.split(' ').pop();
 }
 
 var head = new TrieNode("");
@@ -115,7 +115,7 @@ var index;
 for(index = 0; index < theList.length; index++)
 {
   theList[index] = theList[index].toLowerCase();
-  
+
   var words = theList[index].split(" ");
   tokenized.push(words);
 }
@@ -145,3 +145,9 @@ for(index = 0; index < tokenized.length; index++)
 }
 
 Recommend("", head);
+
+const preTrainedTrie = new TrieNode("");
+
+const Recommender = sentance => Recommend(sentance, head);
+
+export default Recommender;
