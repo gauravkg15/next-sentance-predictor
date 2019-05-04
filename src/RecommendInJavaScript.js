@@ -11,11 +11,11 @@ class TrieNode
   {
     for (let curTN of this.children)
     {
-      //console.log("found" + theString + curTN.value);
+      //console.info("found" + theString + curTN.value);
       //if(curTN.value.localeCompare(theString))
       if(curTN.value === theString)
       {
-        //console.log("same")
+        //console.info("same")
         return curTN;
       }
     }
@@ -59,7 +59,7 @@ function Recommend(sentence, head)
       var next = cur.findChildNode(words[i]);
       if(next === null)
       {
-        console.log("did not find the word");
+        console.info("did not find the word");
         return null;
       }
       else
@@ -73,15 +73,15 @@ function Recommend(sentence, head)
 
   if(maxChild !== null)
   {
-    console.log("found greatest " + maxChild.value);
+    console.info("found greatest " + maxChild.value);
   }
   else
   {
-    console.log("no child nodes found");
+    console.info("no child nodes found");
   }
 
   recommendation += maxChild.value;
-  console.log(recommendation);
+  console.info(recommendation);
   return recommendation.split(' ').pop();
 }
 
@@ -129,19 +129,19 @@ for(index = 0; index < tokenized.length; index++)
     var child = cur.findChildNode(tokenized[index][j]);
     if(child != null)
     {
-      console.log("Found child node");
+      console.info("Found child node");
       cur = child;
     }
     else
     {
-      console.log("No child node, creating one");
+      console.info("No child node, creating one");
       var newChild = new TrieNode(tokenized[index][j]);
       cur.children.add(newChild);
       cur = newChild;
     }
     cur.amtFinishes++;
   }
-  console.log(cur.amtFinishes);
+  console.info(cur.amtFinishes);
 }
 
 Recommend("", head);

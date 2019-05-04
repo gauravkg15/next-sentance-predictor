@@ -1,6 +1,6 @@
 {
   "name": "next-sentance-predictor",
-  "homepage": "http://gauravkg15.github.io/next-sentance-predictor/index.html",
+  "homepage": "http://gauravkg15.github.io/next-sentance-predictor/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
