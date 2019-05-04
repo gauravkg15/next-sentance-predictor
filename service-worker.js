@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/next-sentance-predictor/precache-manifest.98b511ac689928d687af0756520216fd.js"
+  "/next-sentance-predictor/precache-manifest.767cd274e293e2d58e63fe8646b730dd.js"
 );
 
 self.addEventListener('message', (event) => {
