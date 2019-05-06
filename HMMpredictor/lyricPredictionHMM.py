@@ -59,7 +59,7 @@ def trainHMM():
     for word_pair, next_word_list in transitions.items():
         transitions[word_pair] = convertToProbabilityDict(next_word_list)
     
-    print('Training successful.')
+    print('Training using', training_data_file, "complete")
 
 #train the model using text file
 trainHMM()
@@ -92,8 +92,8 @@ def predict(word0):
     try:
         word1 = sample_word(second_word[word0])
     except:
-        print('word not in dictionary, enter a new word')
-        return
+        # print('word not in dictionary, enter a new word')
+        return('word not in dictionary, enter a new word')
     sentence.append(word1)
     # Subsequent words until END
     while True:
@@ -103,15 +103,15 @@ def predict(word0):
         sentence.append(word2)
         word0 = word1
         word1 = word2
-    print(' '.join(sentence))
-
+    # print(' '.join(sentence))
+    return ' '.join(sentence)
 #get user input and call predict method
-while True:
-    # Get user input for initial word
-    word0 = input("Enter a word/phrase or stop! to stop: ")
-    #just get final word from user input
-    word0 = word0.split()[-1]
-    if(word0 == "stop!"):
-        break
-    predict(word0)
+# while True:
+#     # Get user input for initial word
+#     word0 = input("Enter a word/phrase or stop! to stop: ")
+#     #just get final word from user input
+#     word0 = word0.split()[-1]
+#     if(word0 == "stop!"):
+#         break
+#     predict(word0)
 
