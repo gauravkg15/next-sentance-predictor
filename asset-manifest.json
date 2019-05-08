@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/next-sentance-predictor/static/css/main.96329875.chunk.css",
-    "main.js": "/next-sentance-predictor/static/js/main.b0a8ed6b.chunk.js",
-    "main.js.map": "/next-sentance-predictor/static/js/main.b0a8ed6b.chunk.js.map",
+    "main.js": "/next-sentance-predictor/static/js/main.06a5cc5c.chunk.js",
+    "main.js.map": "/next-sentance-predictor/static/js/main.06a5cc5c.chunk.js.map",
     "runtime~main.js": "/next-sentance-predictor/static/js/runtime~main.c2e0b30e.js",
     "runtime~main.js.map": "/next-sentance-predictor/static/js/runtime~main.c2e0b30e.js.map",
     "static/js/2.3d8dcad6.chunk.js": "/next-sentance-predictor/static/js/2.3d8dcad6.chunk.js",
     "static/js/2.3d8dcad6.chunk.js.map": "/next-sentance-predictor/static/js/2.3d8dcad6.chunk.js.map",
     "index.html": "/next-sentance-predictor/index.html",
-    "precache-manifest.767cd274e293e2d58e63fe8646b730dd.js": "/next-sentance-predictor/precache-manifest.767cd274e293e2d58e63fe8646b730dd.js",
+    "precache-manifest.4f6c674a48b6f78ef652d91aac158c6d.js": "/next-sentance-predictor/precache-manifest.4f6c674a48b6f78ef652d91aac158c6d.js",
     "service-worker.js": "/next-sentance-predictor/service-worker.js",
     "static/css/main.96329875.chunk.css.map": "/next-sentance-predictor/static/css/main.96329875.chunk.css.map"
   }
