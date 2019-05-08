@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
        isSpeaking: false,
        recommendation: '',
+       recognizedText: null,
        useIntelligence: false,
        SpeechRecognizer: this.initSpeechRecognizer(),
     };
@@ -42,7 +43,7 @@ class App extends React.Component {
 
   useIntelligence = () => {
     this.animateCircuit();
-    this.setState({ useIntelligence: !this.state.useIntelligence, recommendation: '' });
+    this.setState({ useIntelligence: !this.state.useIntelligence, recommendation: '', recognizedText: null });
   }
 
   initSpeechRecognizer = () => {
@@ -55,14 +56,15 @@ class App extends React.Component {
       for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
           const result = event.results[i][0].transcript;
+          this.setState({ recognizedText: result, isSpeaking: false });
           console.log(result);
 
           if (this.state.useIntelligence) {
-            fetch('https://gauravkg15.pythonanywhere.com/hmm_predict?token=api_response')
+            fetch(`https://gauravkg15.pythonanywhere.com/hmm_predict?token=${result}`)
               .then(res => res.json())
-              .then(res => this.setState({ isSpeaking: false, recommendation: res.response }))
+              .then(res => setTimeout(() => this.setState({ recommendation: res.response }), 1500))
           } else {
-            this.setState({ isSpeaking: false, recommendation:  Recommender(result) });
+            this.setState({ recommendation:  Recommender(result) });
           }
         }
         SpeechRecognizer.stop();
@@ -85,7 +87,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isSpeaking, recommendation, useIntelligence } = this.state;
+    const { isSpeaking, recommendation, useIntelligence, recognizedText } = this.state;
 
     return (
       <div className="App">
@@ -100,6 +102,13 @@ class App extends React.Component {
           <div className={`icon ${isSpeaking ? 'voice-input-active' : ''}` } onClick={this.getTextFromSpeech}>
             <i className="fas fa-microphone-alt" />
           </div>
+          {
+            recognizedText &&
+            <React.Fragment>
+              <h3> Recognized speech: </h3>
+              <p> { recognizedText } </p>
+            </React.Fragment>
+          }
           {
             recommendation &&
             <React.Fragment>
